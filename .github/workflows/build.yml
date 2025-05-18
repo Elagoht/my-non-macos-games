@@ -57,7 +57,8 @@ jobs:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
         run: |
-          go build -o release/my-non-macos-games-${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.platform == 'windows' && '.exe' || '' }} ./my-non-macos-games
+          mkdir -p release
+          go build -o release/my-non-macos-games-${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.platform == 'windows' && '.exe' || '' }} .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
