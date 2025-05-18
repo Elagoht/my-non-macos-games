@@ -6,6 +6,10 @@ on:
       - "v*"
   workflow_dispatch:
 
+# Add permissions block at the workflow level
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -68,6 +72,8 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
