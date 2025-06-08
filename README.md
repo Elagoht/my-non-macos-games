@@ -6,7 +6,7 @@
 
 I'm considering to buy a new Mac Mini and I want to know which games I **CANNOT** play on it. Steam has an option to filter games working on Mac OS but not show which games are **NOT** working on Mac OS.
 
-_I wanted to know what I will miss if I don't._
+_I wanted to know what I will miss if._
 
 ## Requirements
 
@@ -18,7 +18,7 @@ _I wanted to know what I will miss if I don't._
 You need to store your Steam Developer API key and Steam ID 64 in an `.env` file.
 
 ```env
-STEAM_API_KEY="your_api_key"
+API_KEY="your_api_key"
 STEAM_ID_64="your_steam_id_64"
 ```
 
